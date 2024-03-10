@@ -1,0 +1,29 @@
+en
+conf t
+
+dial-peer 1 voip
+destination-pattern 2..
+session target ipv4:10.10.10.2
+exit
+
+dial-peer 2 voip
+destination-pattern 4..
+session target ipv4:10.10.10.6
+exit
+
+dial-peer 3 voip
+destination-pattern 3..
+session target ipv4:10.10.10.10
+exit
+
+dial-peer 4 voip
+destination-pattern 3..
+session target ipv4:10.10.10.2
+exit
+
+dial-peer 1 voip
+destination-pattern 4..
+session target ipv4:10.10.10.14
+exit
+
+do wr
