@@ -1,0 +1,5 @@
+router ospf 10
+network 10.10.10.4 0.0.0.3 area 0
+network 10.10.10.0 0.0.0.3 area 0
+network 192.168.100.0 0.0.0.31 area 0
+network 172.16.100.0 0.0.0.31 area 0
