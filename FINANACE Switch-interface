@@ -1,0 +1,15 @@
+vlan 10
+name DATA
+vlan 100
+name VOICE
+
+int fa0/1
+switchport mode trunk
+exit
+
+int range fa0/2-24
+switchport mode access
+switchport access vlan 10
+switchport voice vlan 100
+
+do wr
