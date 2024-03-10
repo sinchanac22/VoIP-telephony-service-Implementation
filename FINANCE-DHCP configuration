@@ -1,0 +1,12 @@
+en
+conf t
+exit
+
+service dhcp
+ip dhcp excluded-address 192.168.100.1
+ip dhcp pool FINANCE
+network 172.16.100.1 255.255.255.224
+default-router 172.16.100.1
+option 150 ip 172.16.100.1
+
+do wr
