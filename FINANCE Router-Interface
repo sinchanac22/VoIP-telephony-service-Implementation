@@ -1,0 +1,25 @@
+enable
+configure terminal 
+inerface FastEthernet0/0
+no shutdown 
+exit
+
+inerface Serial0/3/0
+no shutdown
+exit
+
+inerface Serial0/3/1
+no shutdown
+exit
+
+interface Serial0/3/0
+ip address 10.10.10.1 255.0.0.0
+ip address 10.10.10.1 255.255.255.255.252
+
+interface Serial0/3/1
+ip address 10.10.10.6 255.0.0.0
+ip address 10.10.10.1 255.255.255.255.252
+exit
+
+do wr
+
